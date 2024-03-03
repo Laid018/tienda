@@ -1,0 +1,32 @@
+---
+import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url";
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro'
+import Separator1 from '../components/Separator1.astro'
+import Separator2 from '../components/Separator2.astro'
+import GridContent from '../components/GridContent.astro'
+import Carousel from '../components/Carousel.astro'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<Hero />
+		<main>
+			<Separator1 />
+			GRID DE FOTOS
+			<GridContent />
+			<Separator2 />
+			<Carousel />
+		</main>
+		<Footer />
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</html>
